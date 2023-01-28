@@ -10,7 +10,7 @@ app.post("/login", (req, res) => {
     const user = {
         id: 1,
         username: "Arohan",
-        email: "xyz@test.com"
+        password: "xyz"
     }
     jwt.sign({ user }, secretKey, { expiresIn: '3000s' }, (err, token) => {
         res.json({ token })
